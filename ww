@@ -1,0 +1,13 @@
+The dataset of CGED over the years is diverse, including both simplified and traditional Chinese. Therefore, it is necessary to uniformly convert traditional characters to simplified ones. However, there is a relatively obvious problem: the character "zhe" will be mistakenly converted to "zao". This error occurs quite frequently, so it is necessary to manually replace the mistakenly converted "zao" with "zhe". 
+
+The error points emphasized in the 2022 version are based at the character level, while the error points of previous datasets are mostly based at the word level. Therefore, before the training task, use the official provided "pair2edit" file for conversion, uniformly replacing the character-level error labels with the word-level error labels. For the test sets of 2016, 2017, and 2018, the "correct" field was not provided, and the "pair2edit" method could not be used. Therefore, the original error labels can be used directly. 
+
+There are some sample annotations that are incorrect. We have removed the data with significant annotation issues. 
+
+Remove data with text length less than 5 or less than 7; 
+
+Some of the samples were missing punctuation at the end. These errors were not significant for the model, so the punctuation was added. 
+
+Use the training and test sets from 2014 to 2018 as the training sets for the entire data domain over the years, and use the test set from 2020 to 2021 as the validation set for the training task. 
+
+Version 1 is the error label for the conversion of old pair2edit files, while version 2 is the error label for the conversion of new pair2edit files.
