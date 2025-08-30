@@ -1,6 +1,7 @@
 # Data preprocessing
 
 We conduct our experiments using a cleaned and reformatted version of the Chinese Grammatical Error Diagnosis (CGED) corpus, originally released as part of the NLP-TEA shared tasks (Rao et al., 2020). The original CGED corpora were sourced from the writing section of the HSK (Pinyin of Hanyu Shuiping Kaoshi, Test of Chinese Level) (Cui et al, 2011; Zhang et al, 2013). The CGED dataset consists of sentences written by learners of Chinese as a foreign language (CFL), manually annotated by native speakers to mark grammatical errors, their types, and corresponding corrections. 
+
 The file is provided in JSONL (JSON Lines) format, where each line is a valid JSON object that contains the three items:
  
 - text: the original sentence potentially containing one or more grammatical errors;
